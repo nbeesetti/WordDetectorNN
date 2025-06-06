@@ -2,6 +2,24 @@
 
 A neural network based detector for handwritten words.
 
+## Run page to words image preprocessing
+```
+source .venv/bin/activate
+
+pip3 install torch numpy scikit-learn opencv-python matplotlib pathlib
+
+cd src
+python3 infer_save.py
+```
+
+Important notes:
+* Place your images of pages (jpg preferred?) inside /test
+* Near end of infer_save.py, change file_name = "random.jpg" to None if want to process all
+* Results stored in /word_crops with subfolders for each filename
+* words images are ordered by filename ex: "1.png"
+* Not sure if this captures punctuation...
+
+
 ## Run demo
 * Download [trained model](https://www.dropbox.com/s/mqhco2q67ovpfjq/model.zip?dl=1), and place the unzipped files into the `model` directory
 * Go to the `src` directory and execute `python infer.py`
